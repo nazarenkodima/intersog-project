@@ -1,0 +1,109 @@
+
+//tabs
+.campaign {
+  .tabs {
+    border-bottom: 1px solid rgba(240, 240, 240, 1.000);
+  }
+  .tabs .tab a {
+    color: rgba(95, 163, 219, 0.7)
+  }
+
+  .tabs .tab a.active {
+    color: rgba(95, 163, 219, 1.000)
+  }
+
+  .tabs .tab a:hover  {
+    color: rgba(95, 163, 219, 1.000);
+  }
+
+  .tabs .indicator {
+    background-color: rgba(134, 154, 215, 1.000);
+  }
+
+  .chips {
+    margin: 0px 0px 0px 0px;
+  }
+}
+
+
+//social butons
+.social {
+  background-color: #fff;
+  padding: 20px;
+  margin-left: 10px;
+}
+
+.filter-wrapper {
+  background-color: #fff;
+}
+
+
+//media cards
+
+.card .card-image {
+  height:20em;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+// media card actions
+div.card-action {
+    &__button_left {
+      display: flex;
+      justify-content: flex-start;
+    a:first-child {
+      color: #9b9b9b!important;
+    }
+
+    a:last-child {
+      margin-right: 0px!important;
+      color: #67b3ee!important;
+      cursor: pointer;
+    }
+  }
+}
+
+.card-action {
+  &__username {
+    font-weight: 600;
+    padding-bottom: 5px;
+  }
+  &__network {
+    color: rgba(95, 163, 219, 1.000);
+  }
+}
+
+//media cards
+
+.card-body {
+  &__media {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 25px;
+
+  }
+}
+
+.card-hover.card .card-image .card-title {
+  top: 0;
+  font-size: 15px;
+  background-color: rgba(0,0,0,0.6);
+  overflow: auto;
+  display: none;
+
+}
+
+.card {
+  &:hover {
+    .card-title {
+      display: block !important;
+    }
+  }
+}
+
+.card-hover.card .card-content {
+  background-color: #fff;
+}

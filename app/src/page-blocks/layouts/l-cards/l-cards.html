@@ -1,0 +1,47 @@
+
+    <div class="cards-wrapper">
+        <div class="row">
+            <div class="col s12 m6 l3" ng-repeat="card in cards.campaigns | limitTo: displayNumber">
+                <div class="card small grey lighten-4" ng-style="{borderTop : card.color }">
+                    <div class="card-content">
+                        <span class="card-title">
+                           {{ card.name }}
+                        </span>
+                        <p class="card-type grey-text text-lighten-1"> {{ card.type }}</p>
+                        <div class="divider"></div>
+                        <div class="card-body">
+                            <div class="flow-text card-body__posts">
+                                <span class="card-body__title grey-text text-darken-1">Posts</span>
+                              <p> {{ card.approved_posts}} </p>
+                            </div>
+                            <div class="flow-text card-body__influencers">
+                                <span class="card-body__title grey-text text-darken-1">Influencers</span>
+                                <p> {{ card.num_of_artists }} </p>
+                            </div>
+                            <div class="flow-text card-body__likes">
+                                <span class="card-body__title grey-text text-darken-1">Likes</span>
+                                <p> {{ card.approved_likes }} </p>
+                            </div>
+                            <div class="flow-text card-body__comments">
+                                <span class="card-body__title grey-text text-darken-1">Comments</span>
+                                <p> {{ card.approved_comments }} </p>
+                            </div>
+                        </div>
+                        <div class="card-action border-top card-action__button">
+                            <a href="#" ng-click="hideCard()">Hide</a>
+                            <a ng-click="cardDetails({ id: card.id })">Show details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6 l3">
+                <div class="show-more-items">
+                    <a ng-click="showMore(7)">
+                        <span class="show-more-items__number">+8</span>
+                        <span class="show-more-items__text">More to show</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+

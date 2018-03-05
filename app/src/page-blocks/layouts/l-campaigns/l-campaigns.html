@@ -1,0 +1,76 @@
+<div class="card-panel">
+    <p> {{ data.campaigns.name }}  </p>
+</div>
+
+
+<div class="col s12 social" ng-init="getMedia()">
+    <a class="btn btn-social grey lighten-2 black-text">instagram</a>
+    <a class="btn btn-social grey lighten-2 black-text">you tube</a>
+    <a class="btn btn-social grey lighten-2 black-text">facebook</a>
+    <a class="btn btn-social grey lighten-2 black-text">twitter</a>
+</div>
+<div class="row filter-wrapper">
+    <div class="col s12">
+        <ul class="tabs">
+            <li class="tab col s3"><a href="#pending">Pending</a></li>
+            <li class="tab col s3"><a href="#approved">Approved</a></li>
+            <li class="tab col s3"><a href="#rejected">Rejected</a></li>
+        </ul>
+    </div>
+    <div class="keywords">
+        <div class="chips chips-placeholder col m10"></div>
+        <div class="col m2">
+            <a href="#" class="btn blue darken-1 right">filter</a>
+        </div>
+    </div>
+
+</div>
+
+<div id="pending"  class="col s12">
+    <!--media-->
+
+    <div class="row">
+        <div class="col s12 m3" ng-repeat="mediaCard in data.media">
+            <div class="card card-hover">
+                <div class="card-action">
+                    <div class="valign-wrapper">
+                        <div class="col s3">
+                            <img ng-src="{{ mediaCard.author_pic }}" alt="" class="circle responsive-img">
+                        </div>
+                        <div class="col s9">
+                            <div class="card-action__username">@{{ mediaCard.author_username }}</div>
+                            <a ng-href="{{mediaCard.link }}"><div class="card-action__network"> {{ mediaCard.social_network }} </div></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-image">
+                    <img ng-src="{{ mediaCard.pic }}">
+                    <span class="card-title"> {{ mediaCard.caption }} </span>
+                </div>
+                <div class="card-content">
+                    <div class="card-body__media">
+                        <div class="flow-text card-body__likes">
+                            <span class="card-body__title grey-text text-darken-1">Likes</span>
+                            <p> {{ mediaCard.likes_number }} </p>
+                        </div>
+                        <div class="flow-text card-body__comments">
+                            <span class="card-body__title grey-text text-darken-1">Comments</span>
+                            <p> {{ mediaCard.comments_number }} </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-action card-action__button_left">
+                    <a href="#">Reject</a>
+                    <a href="#" ng-click="moveItem()">Approve</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div id="approved" class="col s12">2</div>
+<div id="rejected" class="col s12">3</div>
+
+
+
