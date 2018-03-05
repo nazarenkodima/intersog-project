@@ -1,12 +1,16 @@
 
 # Intersog-project
 
-## Run `npm install` to install all dependencies.
+## Instructions:
 
-## Run `gulp build` once.
++ Run `npm install` to install all dependencies.
 
-## To start the  mock-server run `node mock/index.js`.
++ Install all dependencies for mock-server, cd into the mock folder `cd mock` and run `npm install`
 
-## Run `gulp watch` to start the project.
++ To start the mock-server run `node index.js`
+
++ Run `gulp build` once.
+
++ Run `gulp watch` to start the project.
 
 
